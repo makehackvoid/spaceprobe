@@ -1,0 +1,130 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "How to use the Spaceprobe"
+%
+% https://github.com/makehackvoid/spaceprobe
+%
+% Adapted from "A Template for 'How to create a WiFi account' with Re2o'"
+% https://github.com/Klafyvel/create_account_re2o_poster
+% Images belong to their authors
+%
+% Distributed under Creative Commons CC BY 4.0
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Here you can set the color and the text size
+% Rézo Metz : 1cc0fa
+% Aurore : cf0f23
+\documentclass[color=1cc0fa, size=12pt, logo=logo_rezo.png]{re2o-poster}
+
+\newcommand{\intranet}[1]{\newcommand{\theintranet}{#1}\newcommand{\thecontact}{#1/contact/}}
+\newcommand{\email}[1]{\newcommand{\theemail}{#1}}
+\newcommand{\website}[1]{\newcommand{\thewebsite}{#1}}
+\newcommand{\wifi}[1]{\newcommand{\thewifi}{'#1'}}
+
+% Some informations
+\title{How to use the Spaceprobe}
+\intranet{https://zaphod}
+\website{https://makehackvoid.com}
+\email{contact@makehackvoid.com}
+\wifi{Bienvenue}
+
+% You should not need to change anything below
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{qrcode}
+\usepackage{cclicenses}
+
+\graphicspath{{images/}}
+
+\begin{document}
+
+\maketitle
+
+\vskip \baselineskip
+\begin{minipage}[0.6\pageheight]{\linewidth}
+\begin{multicols}{2}
+\Large 
+\begin{enumerate}
+    \item Connect to the \link{\thewifi} WiFi;
+    \item Go to \link{\theintranet} or flash this QR Code :
+\begin{center}
+\qrcode[height=0.3\linewidth]{\theintranet}
+\end{center}
+    \item If you don't have an account yet:
+        \begin{enumerate}
+            \item Click on 'Sign In';
+            \item Do what the website tells you to do.
+        \end{enumerate}
+    \item If you have an account, click on 'Log In', then log in;
+    \item Go to you user page; 
+        \begin{itemize}
+            \item {\centering%
+\includegraphics[width=.55\linewidth]{pane_ok.png}}
+
+            Your account is active!
+
+
+            \item {\centering%
+\includegraphics[width=.55\linewidth]{pane_nok.png}}
+
+            Your account is not active. Click on 'Pay a connection'.
+        \end{itemize}
+    \item Pay a connection (if you need it)
+    \begin{enumerate}
+        \item {Select the payment method} : 
+
+        {\centering%
+\includegraphics[width=.55\linewidth]{pay_method.png}}
+
+        \item Select your articles. As an example if I stay 3 months, I select 'Abonnement 1 mois' and display '3' in the spin box.
+
+        {\centering%
+\includegraphics[width=.55\linewidth]{pay_article.png}}
+
+        \item Click on confirm and follow the website.
+    \end{enumerate}
+    \item You can use the WiFi!
+
+Go to \link{\thewebsite} if you don't know how to connect.
+
+\end{enumerate}
+
+\end{multicols}
+\end{minipage}
+
+\vskip \baselineskip
+
+\hskip -1.1cm%
+\renewcommand{\arraystretch}{1.8}%
+\begin{tabularx}{\paperwidth}{%
+   @{} p{1.5cm} @{}
+   *4{>{\centering\arraybackslash\large\bfseries}X @{}}
+   p{1.5cm} @{}
+}
+\rowcolor{gray!30}
+\rule{0pt}{2.2cm} & 
+\includegraphics[height=1.8cm]{utorrent.png} &
+\includegraphics[height=1.8cm]{law.png} &
+\includegraphics[height=1.8cm]{share.png} &
+\includegraphics[height=1.8cm]{fun.png} & \\
+& No illegal peer-to-peer & Respect the law & Don't share your account & Enjoy your internet
+\end{tabularx}
+
+\hfill
+{\Large An issue? \emph{\thecontact}\\\hfill Or e-mail us \emph{\theemail}}
+
+\vfill
+\vskip -0.9\baselineskip
+{
+\footnotesize
+u-torrent logo \cc\ccby FlatArt, %
+law icon by Github (MIT license), %
+user-icon \cc\ccby\ccsa Daniel Bruce, %
+Party icon by Webalys
+}
+
+\end{document}
